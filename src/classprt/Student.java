@@ -6,15 +6,21 @@ public class Student {
     int grade;
     String address;
 
+    public Student() {}
+    public Student(int id, String name) {
+        studentID = id;
+        studentName = name;
+    }
+
     public void showStudentInfo() {
         System.out.println(studentName + "," + address);
     }
 
-//    public static void main(String[] args) {
-//        Student studentLee = new Student();
-//        studentLee.studentName = "Lee";
-//        studentLee.address = "seoul";
-//
-//        studentLee.showStudentInfo();
-//    }
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String name) {
+        studentName = name;
+    }
 }
