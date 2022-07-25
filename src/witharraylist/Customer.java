@@ -1,33 +1,39 @@
-package inheritencetest;
+package witharraylist;
 
 public class Customer {
+
     protected int customerID;
     protected String customerName;
     protected String customerGrade;
-    protected int bonusPoint;
-    protected double bonusRatio;
+    int bonusPoint;
+    double bonusRatio;
 
-    public Customer() {
-        customerGrade = "SILVER";
-        bonusRatio = 0.01;
+    public Customer()
+    {
+        initCustomer();
     }
 
-    public Customer(int customerID, String customerName) {
+    public Customer(int customerID, String customerName){
         this.customerID = customerID;
         this.customerName = customerName;
+
+        initCustomer();
+    }
+
+    private void initCustomer()
+    {
         customerGrade = "SILVER";
         bonusRatio = 0.01;
     }
 
-    public int calcPrice(int price) {
+    public int calcPrice(int price){
         bonusPoint += price * bonusRatio;
         return price;
     }
 
-    public String showCustomerInfo() {
-        return customerName + customerGrade + "Grade" + bonusPoint + "Point";
+    public String showCustomerInfo(){
+        return customerName + "is" + customerGrade + "and" + bonusPoint;
     }
-
 
     public int getCustomerID() {
         return customerID;
@@ -52,5 +58,4 @@ public class Customer {
     public void setCustomerGrade(String customerGrade) {
         this.customerGrade = customerGrade;
     }
-
 }
