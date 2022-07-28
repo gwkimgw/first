@@ -1,4 +1,4 @@
-package interfaceTest2;
+package interfacetest2;
 
 public class CustomerTest {
     public static void main(String[] args) {
