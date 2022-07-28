@@ -1,4 +1,4 @@
-package interfaceTest2;
+package interfacetest2;
 
 public interface Buy {
     void Buy();

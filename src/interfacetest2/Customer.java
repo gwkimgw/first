@@ -1,4 +1,4 @@
-package interfaceTest2;
+package interfacetest2;
 
 public class Customer implements Buy, Sell{
     @Override
